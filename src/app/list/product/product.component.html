@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Product</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div>
+    <input type="search" (keyup)="filter($event)">
+  </div>
+</nav>
+
+<div class="card">
+  <div class="card-body">
+    <button type="button" class="btn btn-success" (click)="showHide()">Hide/Show</button>
+  </div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th *ngIf="showImage" scope="col">Image</th>
+      <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let product of productFilter; let i=index">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td *ngIf="showImage"><img src="{{(product.image)}}" width="{{widthImg}}"></td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="delete(i)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
