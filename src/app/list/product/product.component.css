@@ -1,0 +1,12 @@
+
+.banner img{
+  background-color: red;
+  width: 200px;
+  height: 50px;
+  /*position: fixed;*/
+}
+
+.container{
+  margin-top: 40px;
+}
+

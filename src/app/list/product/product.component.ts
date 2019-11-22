@@ -14,21 +14,39 @@ export class ProductComponent implements OnInit {
   public products: IProduct[] = [
     {
       id: 1,
-      name: 'iphone7',
-      price: 3000,
+      name: 'iphone 7',
+      price: '9.300.000đ',
       image: 'assets/ip7.png'
     },
     {
       id: 2,
-      name: 'iphone7+',
-      price: 3000,
-      image: 'assets/ip7.png'
+      name: 'iphone XsMax',
+      price: '38.000.000đ',
+      image: 'assets/xsMax.png'
     },
     {
       id: 3,
-      name: 'iphone8',
-      price: 3000,
-      image: 'assets/ip7.png'
+      name: 'iphone 8',
+      price: '14.600.000đ',
+      image: 'assets/8.png'
+    },
+    {
+      id: 4,
+      name: 'Samsung Galaxy Note 10 Plus',
+      price: '16,490,000đ',
+      image: 'assets/thumb_Note10_plus-1.jpg'
+    },
+    {
+      id: 5,
+      name: 'Samsung Galaxy A80',
+      price: '11,990,000đ',
+      image: 'assets/thumb_A80-1.jpg'
+    },
+    {
+      id: 6,
+      name: 'Xiaomi Mi CC9 Pro ',
+      price: '10,490,000đ',
+      image: 'assets/thumb_CC9pro-1.jpg'
     },
   ];
   widthImg = 100;
@@ -56,6 +74,9 @@ export class ProductComponent implements OnInit {
     if (confirmResult) {
       this.products.splice(id, 1);
     }
+  }
+  onSubmit(){
+
   }
   ngOnInit() {
     this.productFilter = this.products;
