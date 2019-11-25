@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {RouterModule} from '@angular/router';
 import { ProductAddComponentComponent } from './product/product-add-component/product-add-component.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ProductEditComponentComponent } from './product-edit/product-edit-component/product-edit-component.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MenuComponent,
     SlideComponent,
     ProductAddComponentComponent,
+    ProductEditComponentComponent,
   ],
   imports: [
     BrowserModule,

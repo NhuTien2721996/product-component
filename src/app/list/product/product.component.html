@@ -32,8 +32,8 @@
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                     (keyup)="filter($event)">
+<!--              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"-->
+<!--                     (keyup)="filter($event)">-->
             </form>
           </div>
         </nav>
@@ -59,7 +59,7 @@
           <p class="card-title" style="color: red">{{product.price}}</p>
           <button type="button" class="btn btn-danger" (click)="delete(i)">Delete</button>
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn btn-primary" [routerLink]="['/home',i, 'edit']">
             Edit
           </button>
 

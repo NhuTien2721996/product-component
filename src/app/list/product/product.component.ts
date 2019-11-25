@@ -17,6 +17,9 @@ export class ProductComponent implements OnInit {
   }
 
   delete(id) {
-    this.productService.delete(id);
+    if (confirm('bạn có muốn xóa không?')) {
+      this.productService.delete(id);
+    }
+
   }
 }
